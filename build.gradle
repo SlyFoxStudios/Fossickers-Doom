@@ -1,5 +1,5 @@
 group 'SlyFoxStudios'
-version '$buildNumber-SNAPSHOT'
+version env.BUILD_NUMBER+'-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'application'
