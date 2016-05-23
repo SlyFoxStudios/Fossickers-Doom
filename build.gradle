@@ -11,6 +11,17 @@ sourceSets.main.resources.srcDirs = ['res']
 
 sourceCompatibility = 1.5
 
+task zip4me(type: Zip) {
+    def fileDir = new File('/game')
+    from 'build/libs'
+    into fileDir
+    outputs.dir fileDir
+}
+applicationDistribution.from( bye ) {
+    into "done"
+}
+
+
 jar {
     manifest {
         attributes 'Main-Class': 'com.mojang.ld22.Game'
