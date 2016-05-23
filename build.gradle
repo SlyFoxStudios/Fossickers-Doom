@@ -1,5 +1,5 @@
 group 'SlyFoxStudios'
-version '1.0-SNAPSHOT'
+version '$buildNumber-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'application'
@@ -11,13 +11,15 @@ sourceSets.main.resources.srcDirs = ['res']
 
 sourceCompatibility = 1.5
 
+ext.buildNumber = System.getenv("BUILD_NUMBER") ?: "dev"
+
 task zip4me(type: Zip) {
     def fileDir = new File('/game')
     from 'build/libs'
     into fileDir
     outputs.dir fileDir
 }
-applicationDistribution.from( bye ) {
+applicationDistribution.from( zip4me ) {
     into "done"
 }
 

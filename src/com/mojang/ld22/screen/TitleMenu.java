@@ -69,7 +69,7 @@ public class TitleMenu extends Menu {
         String ee;
         if(!loadedsplashes) {
             try {
-                URL br = new URL("http://minicraftplus.webs.com/-splashes.txt");
+                URL br = new URL("http://zectr.com/game/-splashes.txt");
                 URLConnection e = br.openConnection();
                 e.setReadTimeout(1000);
                 Scanner bufferedWriter = new Scanner(br.openStream());
@@ -327,11 +327,11 @@ public class TitleMenu extends Menu {
                 Font.draw(GameApplet.username + "!", screen, this.centertext(GameApplet.username + "!"), screen.h - 180, Color.get(0, 330, 330, 330));
             }
 
-            Font.draw("Version 1.8", screen, this.centertext("Version 1.8"), screen.h - 10, Color.get(0, 333, 333, 333));
+            Font.draw("Version 1.0.1", screen, this.centertext("Version 1.0.1"), screen.h - 10, Color.get(0, 333, 333, 333));
             Font.draw("(Arrow keys to move)", screen, 65, screen.h - 35, Color.get(0, 111, 111, 111));
             Font.draw("(X to accept, C to return)", screen, 45, screen.h - 25, Color.get(0, 111, 111, 111));
         } else {
-            Font.draw("Version 1.8", screen, 1, screen.h - 190, Color.get(0, 111, 111, 111));
+            Font.draw("Version 1.0.1", screen, 1, screen.h - 190, Color.get(0, 111, 111, 111));
             Font.draw("(Arrow keys to move)", screen, 65, screen.h - 25, Color.get(0, 111, 111, 111));
             Font.draw("(X to accept, C to return)", screen, 45, screen.h - 15, Color.get(0, 111, 111, 111));
         }
