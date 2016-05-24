@@ -11,7 +11,7 @@ sourceSets.main.resources.srcDirs = ['res']
 sourceCompatibility = 1.5
 
 ext.buildNumber = System.getenv("BUILD_NUMBER") ?: "dev"
-version = ext.buildNumber
+version '-Stable'
 
 
 task zip4me(type: Zip) {
